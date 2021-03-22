@@ -1,10 +1,10 @@
 :root {
-    --dark: rgb(31, 30, 30);
-    --medium: rgb(50, 50, 50);
+    --dark: rgb(0, 0, 0);
+    --medium: rgb(55, 53, 55);
     --light: rgb(245, 240, 240);
-    --primary: rgb(245, 139, 39);
-    --secondary: rgb(74, 224, 235);
-    --nuh-uh: rgb(247, 29, 14);
+    --primary: rgb(75, 220, 230);
+    --secondary: rgb(74, 250, 80);
+    --nuh-uh: rgb(247, 35, 17);
 }
 
 * {
@@ -206,7 +206,7 @@ textarea:enabled {
     color: var(--light);
 }
 
-input:-webkit-autofill,
+/*input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
@@ -216,7 +216,7 @@ textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--light);
   -webkit-box-shadow: 0 0 0px 1000px var(--medium) inset;
   transition: background-color 5000s ease-in-out 0s;
-}
+} */
 
 form div button {
     float: right;
