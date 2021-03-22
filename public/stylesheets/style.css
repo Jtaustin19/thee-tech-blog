@@ -1,0 +1,385 @@
+:root {
+    --dark: rgb(31, 30, 30);
+    --medium: rgb(50, 50, 50);
+    --light: rgb(245, 240, 240);
+    --primary: rgb(245, 139, 39);
+    --secondary: rgb(74, 224, 235);
+    --nuh-uh: rgb(247, 29, 14);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 20px;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    color: var(--primary);
+    margin: 1rem 0;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary);
+    opacity: 0.9;
+}
+
+button {
+    border: 0;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--dark);
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+a:hover,
+button:hover {
+    opacity: 1;
+}
+
+/* ========================================================= */
+
+/* MAIN STYLES START */
+main {
+    flex: 1;
+    padding: 2% 4%;
+    margin-bottom: 2rem;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding-bottom: 1rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 1.5rem;
+}
+
+.post {
+    background-color: var(--medium);
+    line-height: 1.5rem;
+}
+
+.post p {
+    padding: 1rem;
+}
+
+.title {
+    font-size: 1.1rem;
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+.title,
+.meta {
+    padding: 0.3rem;
+}
+
+.meta {
+    border: 1px solid var(--primary);
+    background-color: var(--dark);
+    color: var(--light);
+    font-style: italic;
+    text-align: right;
+}
+
+.username {
+    color: var(--primary);
+    font-style: normal;
+}
+
+.meta a {
+    font-style: normal;
+    padding-left: 0.7rem;
+}
+
+.edit-link {
+    padding: 0 0 1rem 0.3rem;
+    padding-bottom: 1rem;
+}
+
+.comments {
+    padding-top: 3rem;
+}
+
+.comment-form {
+    margin-bottom: 5%;
+}
+
+.comment {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.comment:nth-child(odd),
+.comment:nth-child(odd) .meta {
+    background-color: var(--medium);
+}
+
+.comment .text {
+    padding: 0.3rem;
+}
+
+.comment .meta {
+    font-size: 0.9rem;
+    margin-bottom: 0.5%;
+    border: none;
+    opacity: 0.6;
+}
+/* MAIN STYLES END */
+
+/* ========================================================= */
+
+/* FORM STYTLES START */
+.signup-form h3 {
+    margin-top: 2rem;
+}
+
+.login-form h3,
+.edit-post-form h3 {
+    padding-top: 1rem;
+}
+
+form label {
+    display: block;
+}
+
+form div {
+    margin-bottom: 0.7rem;
+}
+
+textarea,
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--light);
+    background-color: var(--medium);
+    color: var(--light);
+    width: 90%;
+    margin: 5%;
+}
+
+textarea {
+    min-width: 40%;
+    min-height: 5rem;
+}
+
+input:focus,
+input:enabled,
+textarea:focus,
+textarea:enabled {
+    outline: none;
+    border: 1px solid var(--secondary);
+    background-color: var(--medium);
+    color: var(--light);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid var(--secondary);
+  -webkit-text-fill-color: var(--light);
+  -webkit-box-shadow: 0 0 0px 1000px var(--medium) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+form div button {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 4rem;
+    border: 1px solid var(--primary);
+    background-color: var(--dark);
+    color: var(--primary);
+}
+
+form div button:hover {
+    background-color: var(--primary);
+    color: var(--dark);
+    /* opacity: 1; */
+}
+
+.save-post-btn {
+    border-color: var(--secondary);
+    color: var(--secondary)
+}
+
+.save-post-btn:hover{
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+
+.delete-post-btn {
+    border-color: 1px solid var(--nuh-uh);
+    color: var(--nuh-uh);
+}
+
+.delete-post-btn:hover {
+    background-color: var(--nuh-uh);
+    color: var(--dark);
+}
+/* FORM STYTLES END */
+
+/* ========================================================= */
+
+/* HEADER STYLES START */
+header {
+    background-color: var(--dark);
+    border-bottom: 1px solid var(--light);
+    padding: 1rem 1%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+}
+
+header h1 a,
+header nav a,
+header nav button {
+    color: var(--primary)
+}
+
+header h1 a {
+    font-size: 1.75rem;
+}
+
+header h1 a,
+header nav a,
+header nav button {
+    margin: 0 1rem;
+}
+
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: normal;
+}
+/* HEADER STYLES soft END */
+
+/* ========================================================= */
+
+header,
+header nav,
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ========================================================= */
+
+/* FOOTER STYLES soft START */
+footer {
+    position: absolute;
+    margin-top: 1rem;
+    background-color: var(--dark);
+    bottom: 0;
+    width: 100%;
+    max-width: 1000px;
+    border-top: 1px solid var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+}
+
+footer,
+footer a {
+    font-size: 1rem;
+}
+
+footer a {
+    padding-top: 0.3rem;
+    padding-left: 0.7rem;
+    color: var(--light);
+}
+/* FOOTER STYLES END */
+
+/* ========================================================= */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 530px) {
+
+    header {
+        padding-bottom: 0.5rem;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 a {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    footer a {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+    header {
+        padding-top: 0.3rem;
+    }
+
+    header h1 a {
+        font-size: 1.5rem;
+    }
+
+    header nav a,
+    .btn-no-style {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 304px) {
+
+    footer a {
+        padding-left: 0;
+    }
+}
